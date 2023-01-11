@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+.theme-light {
+background-color: white;
+color: black;
+}
+
+/* .theme-dark {
+    --color-primary:
+} */
+
+.keyboard {
+    position: relative;
+}
+.white-key {
+    background-color: white;
+    height: 200px;
+    min-width: 50px;
+    border: solid black;
+}
+
+.black {
+    display: flex;
+    box-sizing: border-box;
+    /* position: absolute; */
+}
+
+.black-key:nth-child(1) {
+    left: 8%;
+}
+
+.black-key:nth-child(2) {
+    left: 22%;
+}
+.black-key:nth-child(3) {
+    left: 51%;
+}
+.black-key:nth-child(4) {
+    left: 66%;
+}
+.black-key:nth-child(5) {
+    left: 80%;
+}
+/* .black-key:nth-child(6) {
+    left: 76%;
+}
+.black-key:nth-child(7) {
+    left: 86%;
+} */
+.black-key {
+    position: absolute;
+    background: black;
+    height: 120px;
+    min-width: 40px;
+    border: solid white;
+    
+    
+}
+
+.keyboard {
+    border: solid black;
+}
+
+.key {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
