@@ -18,10 +18,19 @@ color: black;
     position: relative;
 }
 .white-key {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: black;
     background-color: white;
     height: 200px;
     min-width: 50px;
     border: solid black;
+}
+
+.white-key h1 {
+    position: absolute;
+    bottom: 10%;
 }
 
 .black {
@@ -53,6 +62,9 @@ color: black;
     left: 86%;
 } */
 .black-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     background: black;
     height: 120px;
@@ -70,5 +82,7 @@ color: black;
     cursor: pointer;
     border-radius: 5px;
 }
+
+
 
 
