@@ -1,13 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@400;500;700&display=swap');
 
+
+
+* {
+    /* border: solid yellow; */
+    box-sizing: border-box;
+   
+}
+
 body {
     font-family: "Poppins";
-    box-sizing: border-box;
+    background-color: #0C1B33;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 40px);
+    /* border: solid red; */
 }
 
 .theme-light {
 background-color: white;
 color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
 }
 
 /* .theme-dark {
@@ -16,6 +45,12 @@ color: black;
 
 .keyboard {
     position: relative;
+    display: flex;
+    height: max-content;
+}
+
+.white {
+    display: flex;
 }
 .white-key {
     display: flex;
@@ -25,7 +60,9 @@ color: black;
     background-color: white;
     height: 200px;
     min-width: 50px;
-    border: solid black;
+    border: solid black 1px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .white-key h1 {
@@ -33,34 +70,34 @@ color: black;
     bottom: 10%;
 }
 
-.black {
+ .black {
     display: flex;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* position: absolute; */
-}
+}  
 
 .black-key:nth-child(1) {
-    left: 8%;
+    left: 6%;
 }
 
 .black-key:nth-child(2) {
-    left: 22%;
+    left: 16%;
 }
 .black-key:nth-child(3) {
-    left: 51%;
+    left: 36%;
 }
 .black-key:nth-child(4) {
-    left: 66%;
+    left: 46%;
 }
 .black-key:nth-child(5) {
-    left: 80%;
+    left: 56%;
 }
-/* .black-key:nth-child(6) {
+ .black-key:nth-child(6) {
     left: 76%;
 }
 .black-key:nth-child(7) {
     left: 86%;
-} */
+} 
 .black-key {
     display: flex;
     align-items: center;
@@ -68,20 +105,38 @@ color: black;
     position: absolute;
     background: black;
     height: 120px;
-    min-width: 40px;
-    border: solid white;
-    
-    
+    width: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* border: solid white; */
 }
 
 .keyboard {
     border: solid black;
+    margin-top: 4rem;
 }
 
 .key {
     cursor: pointer;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    overflow: hidden;
 }
+
+.key h1 {
+    font-size: 1.3rem;
+}
+
+.white-key.active {
+    background-color:rgba(255, 94, 94, 0.699) ;
+}
+
+.black-key.active {
+    background-color: rgba(254, 240, 47, 0.72);
+}
+
+/* .white {
+    height: max-content;
+} */
 
 
 

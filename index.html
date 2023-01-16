@@ -5,67 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>Document</title>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    "body": ["Poppins"],
-                },
-                container: {
-                    center: true,
-                    padding: '10rem',
-                },
-                extend: {
-                    colors: {
-                        dark: '#0C1B33',
-                    }
-                },
-
-            }
-        }
-    </script>
 </head>
 
-<body class=" body h-screen flex flex-col items-center justify-center bg-dark text-white gap-10">
-    <div class="absolute top-5 right-20">
+<body>
+    <!-- <div class="absolute top-5 right-20">
         <p>Theme</p>
         <div class="flex gap-4 my-2">
             <div class=" h-4 w-4 bg-slate-500 rounded-full cursor-pointer"></div>
             <div class=" button h-4 w-4 bg-white rounded-full cursor-pointer"></div>
         </div>
 
-    </div>
-    <h1 class="title">The Keyboard App</h1>
+    </div> -->
+    <header>
+        <h1 class="title">The Keyboard App</h1>
+    </header>
+
     <!-- <img class="w-40" src="./images/saxophone.png"> -->
     <!-- <button class="play">Play me!</button> -->
+    <main>
+        <div class="keyboard">
+            <div class="white">
+                <div data-key="0" data-note="C" class="key white-key"></div>
+                <div data-key="1" data-note="D" class="key white-key"></div>
+                <div data-key="2" data-note="E" class="key white-key"></div>
+                <div data-key="3" data-note="F" class="key white-key"></div>
+                <div data-key="4" data-note="G" class="key white-key"></div>
+                <div data-key="5" data-note="A" class="key white-key"></div>
+                <div data-key="6" data-note="B" class="key white-key"></div>
+                <div data-key="6" data-note="C2" class="key white-key"></div>
+                <div data-key="6" data-note="D2" class="key white-key"></div>
+                <div data-key="6" data-note="E2" class="key white-key"></div>
+                <!-- <div data-key="13" data-note="C" class="key white-key"></div>
+                <div data-key="15" data-note="B" class="key white-key"></div>
+                <div data-key="17" data-note="C" class="key white-key"></div> -->
+            </div>
+            <div class="black">
+                <div data-key="0" data-note="C-sharp" class="key black-key"></div>
+                <div data-key="1" data-note="D-sharp" class="key black-key"></div>
+                <div data-key="2" data-note="F-sharp" class="key black-key"></div>
+                <div data-key="3" data-note="G-sharp" class="key black-key"></div>
+                <div data-key="4" data-note="A-sharp" class="key black-key"></div>
+                <div data-key="4" data-note="C2-sharp" class="key black-key"></div>
+                <div data-key="4" data-note="D2-sharp" class="key black-key"></div>
+                <!-- <div data-key="13" data-note="G#" class="key black-key"></div>
+                <div data-key="15" data-note="A#" class="key black-key"></div> -->
+            </div>
+        </div>
 
-    <div class="keyboard flex">
-        <div class="white flex">
-            <div data-key="0" data-note="C" class="key white-key"></div>
-            <div data-key="1" data-note="D" class="key white-key"></div>
-            <div data-key="2" data-note="E" class="key white-key"></div>
-            <div data-key="3" data-note="F" class="key white-key"></div>
-            <div data-key="4" data-note="G" class="key white-key"></div>
-            <div data-key="5" data-note="A" class="key white-key"></div>
-            <div data-key="6" data-note="B" class="key white-key"></div>
-            <!-- <div data-key="13" data-note="C" class="key white-key"></div>
-            <div data-key="15" data-note="B" class="key white-key"></div>
-            <div data-key="17" data-note="C" class="key white-key"></div> -->
-        </div>
-        <div class="black">
-            <div data-key="0" data-note="C-sharp" class="key black-key"></div>
-            <div data-key="1" data-note="D-sharp" class="key black-key"></div>
-            <div data-key="2" data-note="F-sharp" class="key black-key"></div>
-            <div data-key="3" data-note="G-sharp" class="key black-key"></div>
-            <div data-key="4" data-note="A-sharp" class="key black-key"></div>
-            <!-- <div data-key="13" data-note="G#" class="key black-key"></div>
-            <div data-key="15" data-note="A#" class="key black-key"></div> -->
-        </div>
-    </div>
+    </main>
 
 
     <audio id="C" src="tones/C.mp3"></audio>
@@ -80,6 +71,11 @@
     <audio id="A" src="tones/A.mp3"></audio>
     <audio id="A-sharp" src="tones/A-sharp.mp3"></audio>
     <audio id="B" src="tones/B.mp3"></audio>
+    <audio id="C2" src="tones/C2.mp3"></audio>
+    <audio id="C2-sharp" src="tones/C2-sharp.mp3"></audio>
+    <audio id="D2" src="tones/D2.mp3"></audio>
+    <audio id="D2-sharp" src="tones/D2-sharp.mp3"></audio>
+    <audio id="E2" src="tones/E2.mp3"></audio>
 </body>
 
 </html>

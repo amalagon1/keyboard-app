@@ -4,8 +4,8 @@ const sharps = document.querySelectorAll('.black-key');
 const body = document.querySelector('.body');
 const keys = document.querySelectorAll('.key');
 
-const WHITE_KEYS = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
-const BLACK_KEYS = ['w', 'e', 't', 'y', 'u'];
+const WHITE_KEYS = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'];
+const BLACK_KEYS = ['w', 'e', 't', 'y', 'u', 'o', 'p'];
 
 
 // const note = new Audio("tones/C-sharp.mp3");
@@ -26,29 +26,35 @@ document.addEventListener('keydown', e => {
     console.log(key)
 })
 
-regular.forEach(key => {
-    const K = key.dataset.key
-    // console.log(K)
-    var keyName = document.createElement('H1');
-    const content = document.createTextNode(WHITE_KEYS[K])
-    // keyName.className = "key_btn"
+// regular.forEach(key => {
+//     const K = key.dataset.key
+//     // console.log(K)
+//     var keyName = document.createElement('H1');
+//     const content = document.createTextNode(WHITE_KEYS[K])
+//     // keyName.className = "key_btn"
+//     keyName.appendChild(content);
+
+//     key.appendChild(keyName);
+// })
+
+regular.forEach((key, index) => {
+    var keyName = document.createElement("H1");
+    const content = document.createTextNode(WHITE_KEYS[index])
+    console.log(content);
+    keyName.className = 'key_btn'
     keyName.appendChild(content);
-
     key.appendChild(keyName);
 })
 
-sharps.forEach(key => {
-    const B = key.dataset.key
-    console.log(B)
+
+sharps.forEach((key, index) => {
     var keyName = document.createElement('H1');
-    const blk_content = document.createTextNode(BLACK_KEYS[B])
-    // keyName.className = "key_btn"
-    console.log(blk_content)
-    keyName.appendChild(blk_content);
-
+    const content = document.createTextNode(BLACK_KEYS[index])
+    keyName.className = "key_btn"
+    console.log(content)
+    keyName.appendChild(content);
     key.appendChild(keyName);
 })
-
 
 
 
@@ -59,9 +65,11 @@ function playNote(key) {
     console.log(key.dataset.note)
     console.log(noteAudio)
     noteAudio.play()
+    key.classList.add('active');
+    setTimeout(() => {
+        key.classList.remove('active');
+    }, 500)
 }
-
-
 
 
 document.querySelector('.button').addEventListener('click', () => {
@@ -83,9 +91,3 @@ document.querySelector('.button').addEventListener('click', () => {
 
 
 
-// regular.forEach((key, i) => {
-//     console.log(key.dataset)
-//     const number = i < 2 ? '0' + (i + 8) : (i + 8);
-//     const newUrl = "./tones/key" + number + ".mp3"
-//     key.addEventListener('click', () => playMusic(newUrl))
-// })
