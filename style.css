@@ -17,10 +17,12 @@ body {
 }
 
 .title{
+    margin-top: 3rem;
     font-size: 1.5rem;
 }
 
 .subtext{
+   
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -111,7 +113,7 @@ header {
     color: black;
     background-color: white;
     height: 200px;
-    min-width: 50px;
+    width: 50px;
     border: solid black 1px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -200,5 +202,31 @@ header {
     }
 }
 
+@media (max-width: 525px){
+    .subtext{
+        text-align: center;
+    }
+    .black-key{
+        width: 30px;
+    }
+    .white-key{
+        width:40px
+    }
+}
+
+@media (max-width: 400px){
+    
+    /* .keyboard{
+        overflow-x:auto;
+    } */
+
+   .black-key{
+       width: 25px;
+   }
+   .white-key{
+       width:35px
+   }
+    
+}
 
 
