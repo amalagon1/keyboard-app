@@ -42,6 +42,10 @@ body {
     /* border: solid red; */
 }
 
+.play{
+    display: none;
+}
+
 
 @keyframes scale {
     100% {
